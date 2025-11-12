@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+  background-color: #f1f1f1;
+}
+
+.container {
+  width: 80%;
+  margin-inline: auto;
+}
+
+@media (max-widht: 992px){
+  .container{
+    width: 90%;
+  }
+}
+
+.navbar {
+  padding: 20px 0 20px 0;
+}
+
+.navbar-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-box .menu {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar .menu li {
+  list-style-type: none;
+}
+
+.navbar-box .menu li a { 
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.navbar-box .menu li a:hover{
+  border-bottom: 3px solid blue;
+}
+
+.navbar-box .ri-menu-3-line {
+  display: none;
+}
+
+@media (max-width : 768px){
+  .navbar-box .ri-menu-3-line {
+    display: block;
+    font-weight: bold;
+  }
+
+  .navbar-box .menu {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    text-align: center;
+    background-color: aquamarine;
+    width: 100%;
+    padding: 40px 0 40px 0;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+  }
+
+  .navbar-box .menu.menu-active {
+    top: 100px;
+    opacity: 1;
+  }
+
+  .navbar-box .menu li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: underline;
+  }
+}
+
+.hero {
+  padding-top: 60px;
+}
+
+.hero-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.hero-box h1 {
+  font-size: 54px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+.hero-box p {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.hero-box a {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+}
+
+.hero-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+}
+
+@media (max-width: 768px) {
+  .hero-box{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 70px;
+  }
+}
+
+.bentuk {
+  padding-top: 150px;
+  padding-bottom: 150px;
+}
+
+.bentuk-box {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.bentuk-box .box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.bentuk-box .box:hover {
+  background-color: blue;
+}
+
+.bentuk-box .box:hover > *{
+  color: white;
+}
+
+.bentuk-box .box i {
+  color: blue;
+}
+
+.bentuk-box .box h2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 575px) {
+  .bentuk-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.bruang {
+  padding-bottom: 100px;
+}
+
+.bruang-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.bruang-box .box {
+  box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+}
+
+.bruang-box img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.bruang-box .desc {
+  padding: 20px;
+}
+
+.bruang-box .desc p {
+  line-height: 2;
+}
+
+@media (max-width: 575px) {
+  .bruang-box {
+    gap: 40px;
+  }
+}
+
+.bdatar {
+  padding-bottom: 100px;
+}
+
+.bdatar-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.bdatar-box .box {
+  box-shadow: 10px 10px 20px rgb(0, 0, 0, 0.1);
+  border-radius: 10px;
+
+}
+
+.bdatar-box img {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.bdatar-box .desc {
+  padding: 20px;
+}
+
+.bdatar-box .desc p {
+  line-height: 2;
+}
+
+@media (max-width: 575px) {
+  .bdatar-box {
+    gap: 40px;
+  }
+}
+
+.footer {
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer p span {
+  font-weight: bold;
+  color: blue;
+}
+
+.footer .box:nth-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer .box i {
+  cursor: pointer;
+}
+
+.footer .box i:hover {
+  color: blue;
+}
+
+@media (max-width: 768px) {
+  .footer {
+  gap: 20px;
+}
+
+.footer p {
+  font-size: 12px;
+}
+
+.footer .box:nth-child(2) {
+  gap: 10px;
+}
+}
