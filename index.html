@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Matematika</title>
+
+    <link rel="stylesheet" href="/dist/css/style.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+</head>
+<body id="beranda">
+    <div class="navbar">
+        <div class="container">
+            <div class="navbar-box">
+                <div class="logo">
+                    <h1>Matematika</h1>
+                </div>
+                <ul class="menu">
+                    <li>
+                        <a href="#beranda">Beranda</a>
+                    </li>
+                    <li>
+                        <a href="#bentuk">Bentuk Bangun</a>
+                    </li>
+                    <li>
+                        <a href="#bruang">Bangun Ruang</a>
+                    </li>
+                    <li>
+                        <a href="#bdatar">Bangun Datar</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+
+                <i class="ri-menu-3-line ri-2x"></i>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="hero">
+        <div class="container">
+            <div class="hero-box">
+                <div class="box" data-aos="fade-up" data-aos-duration="2000">
+                    <h1>
+                        Belajar <br /> Matematika
+                    </h1>
+                    <p>Selamat datang di website Belajar Matematika! Jangan khawatir jika angka dan rumus terlihat rumit. Di sini, kita akan menjelajahi konsep-konsep dasar, khususnya mengenai bangun ruang dan bangun datar, dengan cara yang sederhana dan interaktif. Mari kita buktikan bersama bahwa matematika itu bisa jadi seru dan menyenangkan!</p>
+                    <a href="#bentuk">Belajar Selengkapnya</a>
+                </div>
+                <div class="box" data-aos="fade-down" data-aos-duration="2000">
+                    <img src="/assetss/hero.jpg" alt="Hero img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bentuk" id="bentuk">
+        <div class="container">
+            <div class="bentuk-box">
+                <div class="box" data-aos="fade-up" data-aos-duration="2000">
+                    <i class="ri-shapes-line ri-2x"></i>
+                    <h2>Bangun Ruang</h2>
+                    <p>Bangun ruang adalah bentuk-bentuk geometris yang memiliki tiga dimensi (panjang, lebar, dan tinggi). Karena memiliki tiga dimensi, bangun ini memiliki volume atau isi. Kita bisa menemukan banyak contohnya di sekitar kita, seperti kotak, bola, atau kaleng.</p>
+                </div>
+                <div class="box" data-aos="fade-down" data-aos-duration="2000" data-aos-delay="200">
+                    <i class="ri-shapes-line ri-2x"></i>
+                    <h2>Bangun Datar</h2>
+                    <p>Bangun datar adalah bentuk-bentuk yang hanya memiliki dua dimensi, yaitu panjang dan lebar. Bentuk ini datar, tidak memiliki ketebalan atau volume. Contoh yang sering kita temui adalah permukaan ubin, layang-layang, atau gambar di selembar kertas.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bruang" id="bruang">
+        <div class="container">
+            <div class="bruang-box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+                <div class="box">
+                    <img src="assetss/kubus.png" alt="Bangun Ruang">
+                    <div class="desc">
+                        <h2>Kubus</h2>
+                        <p>Kubus adalah bangun ruang yang dibatasi oleh enam sisi berbentuk persegi yang identik. Kubus memiliki 12 rusuk yang sama panjang dan 8 titik sudut. Contoh benda berbentuk kubus dalam kehidupan sehari-hari adalah dadu atau kotak rubik.</p>
+                        <br>
+                        <h4>Coba:</h4>
+                        <input type="number" id="panjangSisi" placeholder="Masukkan Panjang sisi" required>
+                        <button onclick="VolumeKubus()">Hitung</button>
+                        <p id="hasilKubus"></p>
+
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assetss/balok.jpeg" alt="Bangun Ruang">
+                    <div class="desc">
+                        <h2>Balok</h2>
+                        <p>Balok adalah bangun ruang tiga dimensi yang mirip dengan kubus, namun sisi-sisinya berbentuk persegi panjang. Balok memiliki tiga pasang sisi berhadapan yang sejajar dan sama besar. Contoh benda berbentuk balok adalah kotak sepatu, lemari, atau akuarium.</p>
+                        <br>
+                        <h4>Coba: </h4>
+                        <input type="number" id="panjangBalok" placeholder="Masukkan Panjang" required><br>
+                        <input type="number" id="lebarBalok" placeholder="Masukkan Lebar" required><br>
+                        <input type="number" id="tinggiBalok" placeholder="Masukkan Tinggi" required>
+                        <button onclick="VolumeBalok()">Hitung</button>
+                        <p id="hasilBalok"></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assetss/tabung.png" alt="Bangun Ruang">
+                    <div class="desc">
+                        <h2>Tabung</h2>
+                        <p>Tabung adalah bangun ruang yang dibentuk oleh dua lingkaran sejajar (sebagai alas dan tutup) dan sebuah sisi lengkung yang disebut selimut tabung. Contoh benda yang berbentuk tabung adalah kaleng minuman, gelas, atau pipa air.</p>
+                        <br>
+                        <h4>Coba: </h4>
+                        <input type="number" id="jari-jariAlas" placeholder="Masukkan jari jari Alas" required><br>
+                        <input type="number" id="tinggiTabung" placeholder="Masukkan Tinggi" required>
+                        <button onclick="VolumeTabung()">Hitung</button>
+                        <p id="hasilTabung"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bdatar" id="bdatar">
+        <div class="container">
+            <div class="bdatar-box" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="200">
+                <div class="box">
+                    <img src="assetss/persegi1.jpg" alt="Bangun Ruang">
+                    <div class="desc">
+                        <h2>Persegi</h2>
+                        <p>Persegi adalah bangun datar yang memiliki empat sisi sama panjang dan empat sudut siku-siku (90 derajat). Karena semua sisinya sama, kita hanya perlu tahu panjang satu sisi untuk menghitung luas atau kelilingnya. Contohnya adalah ubin lantai atau kertas origami.</p>
+                        <br>
+                        <h4>Coba:</h4>
+                        <input type="number" id="sisiPersegi" placeholder="Masukkan sisi" required>
+                        <button onclick="LuasPersegi()">Hitung</button>
+                        <p id="hasilPersegi"></p>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <img src="assetss/pp.jpg" alt="Bangun Ruang">
+                    <div class="desc">
+                        <h2>Persegi Panjang</h2>
+                        <p>Persegi panjang adalah bangun datar yang memiliki empat sisi, di mana dua pasang sisi yang berhadapan sejajar dan sama panjang. Sisi yang lebih panjang disebut 'panjang' (p) dan sisi yang lebih pendek disebut 'lebar' (l). Keempat sudutnya juga siku-siku. Contohnya adalah pintu, layar TV, atau buku.</p>
+                        <br>
+                        <h4>Coba: </h4>
+                        <input type="number" id="panjangPP" placeholder="Masukkan Panjang" required><br>
+                        <input type="number" id="lebarPP" placeholder="Masukkan Lebar" required>
+                        <button onclick="LuasPP()">Hitung</button>
+                        <p id="hasilPP"></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="assetss/lingkaran.jpeg" alt="Bangun Ruang">
+                    <div class="desc">
+                        <h2>Lingkaran</h2>
+                        <p>Lingkaran adalah bangun datar yang terdiri dari semua titik yang memiliki jarak sama ke satu titik tetap yang disebut 'pusat'. Jarak dari pusat ke tepi lingkaran disebut 'jari-jari' (r). Lingkaran tidak memiliki sudut. Contohnya adalah roda, jam dinding, atau permukaan koin.</p>
+                        <br>
+                        <h4>Coba: </h4>
+                        <input type="number" id="jari-jari" placeholder="Masukkan Jari-jari" required>
+                    <button onclick="LuasLingkaran()">Hitung</button>
+                    <p id="hasilLingkaran"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer" id="contact">
+        <div class="box">
+            <p>&copy; Copyright 2025 <span>Nur Cahya Wulandari</span>. All rights Reserved</p>
+        </div>
+        <div class="box">
+            <i class="ri-instagram-fill ri-2x"></i>
+            <i class="ri-tiktok-fill ri-2x"></i>
+            <i class="ri-whatsapp-fill ri-2x"></i>
+        </div>
+    </div>
+
+    <script src="./dist/js/script.js"></script>
+
+
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
